@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <h1>ChadGPT</h1>
   <div class="user-input">
-    <h4>Enter your Message :</h4>
-    <input [formControl]="userInput" type="text">
-    <button (click)="sendRequest()">Ask !</button>
+    <div class="msg">
+      <h4>Enter your Message :</h4>
+      <input [formControl]="userInput" type="text">
+      <button (click)="sendRequest()">Ask !</button>
+    </div>
+
+    <div class="context">
+      <h4>Give Context to Chad !</h4>
+      <input id="fileInput" (change)="loadFile($event)" type="file">
+      <button (click)="readFile()" >upload!</button>
+    </div>
   </div>
   <div class="output">{{output}}</div>
 </body>
+
 </html>

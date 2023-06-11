@@ -10,8 +10,6 @@ import { Observable } from 'rxjs';
 export class OpenaiService {
 
   openai: OpenAIApi;
-  private apiUrl: string = 'https://api.openai.com/v1/engines/gpt-3.5-turbo/completions';
-
 
   constructor() {
     this.openai = new OpenAIApi(new Configuration({
